@@ -13,4 +13,4 @@ jobs:
         server: files.000webhost.com
         username: pacoprojetbts
         password: q#w5kd5E3vWF%y7r$wno
-        server-dir : public_html/
+        server-dir : public_html/projet5/
