@@ -14,7 +14,7 @@ $base = new PDO('mysql:host=localhost; dbname=id20407984_pacov', 'id20407984_pac
 $base->exec("SET CHARACTER SET utf8");
 
 //2° - Préparation de requette et execution
-$retour = $base->query('SELECT * FROM movies;');
+$retour = $base->query('SELECT * FROM movies WHERE annee = 2020;');
 
 //3° - Lecture du resultat de la requette
 while ($data = $retour->fetch()){
