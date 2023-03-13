@@ -18,7 +18,7 @@ $retour = $base->query('SELECT * FROM movies WHERE annee = '.$ANNEE.';');
 
 //3° - Lecture du resultat de la requette
 while ($data = $retour->fetch()){
-echo $data['id']." ".$data['titre']." ".$data['genre']." ".$data['annee']."</br>";
+echo $data['id']." ".$data['title']." ".$data['genre']." ".$data['annee']."</br>";
 }
 
 ?>
