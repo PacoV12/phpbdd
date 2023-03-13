@@ -45,7 +45,7 @@ class Database {
 
   /** Get movies field "year" */
   public function fetchMoviesFromYear(int $annee): array {
-    $prep = $this->pdo->prepare('SELECT * FROM movies WHERE year = ?');
+    $prep = $this->pdo->prepare('SELECT * FROM movies WHERE annee = ?');
 
     if ($prep->execute([ $annee ])) {
       $all = $prep->fetchAll(PDO::FETCH_ASSOC);
