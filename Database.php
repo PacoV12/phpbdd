@@ -57,7 +57,7 @@ class Database {
 
   /** Insert new movie in database */
   public function insertMovie(string $title, int $annee, string $genre): bool {
-    $prep = $this->pdo->prepare('INSERT INTO movies (title, genre, year) VALUE (?, ?, ?)');
+    $prep = $this->pdo->prepare('INSERT INTO movies (title, genre, annee) VALUE (?, ?, ?)');
 
     if ($prep->execute([ $title, $genre, $annee ])) {
       return true;
