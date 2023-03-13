@@ -15,7 +15,8 @@ class Database {
 
   public function __construct() {
     try {
-      $this->pdo = new PDO('mysql:host=localhost; dbname=id20407984_pacov', 'id20407984_pacova', 'KF{[\LwgIH6~#MJr');
+      $this->pdo =  new PDO('mysql:host=localhost; dbname=id20407984_pacov', 'id20407984_pacova', 'KF{[\LwgIH6~#MJr');
+      $base->exec("SET CHARACTER SET utf8");
     // If connection failed discard this error and die()
     } catch(PDOException $ex) {
       die("Failed to connect to database server");
