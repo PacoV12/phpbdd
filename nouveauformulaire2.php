@@ -49,7 +49,7 @@
           <td><?= $m['id'] ?></td>
           <td><?= $m['title'] ?></td>
           <td><?= $m['genre'] ?></td>
-          <td><?= $m['year'] ?></td>
+          <td><?= $m['annee'] ?></td>
         </tr>
       <?php endforeach ?>
     </table>
