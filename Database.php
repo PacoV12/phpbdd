@@ -1,4 +1,12 @@
 <?php
+  
+  require_once 'Database.php';
+
+  $title = $_POST['title'];
+  $year = $_POST['year'];
+  $genre = $_POST['genre'];
+  $db = new Database();
+
 
 /**
  * Interfacing our web application and our database
