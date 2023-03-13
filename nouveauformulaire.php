@@ -19,7 +19,7 @@
         <select id="y" name="y">
           <option value="all">Toutes</option>
           <?php foreach ($store->fetchAllYears() as $annee): ?>
-            <option><?php echo $year ?></option>
+            <option><?= $annee ?></option>
           <?php endforeach ?>
         </select>
         <button type="submit">Rechercher</button>
