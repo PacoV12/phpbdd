@@ -21,8 +21,8 @@
         <label for="y">Afficher par année</label>
         <select id="y" name="y">
           <option value="all">Toutes</option>
-          <?php foreach ($store->fetchAllYears() as $year): ?>
-            <option><?= $year ?></option>
+          <?php foreach ($store->fetchAllYears() as $annee): ?>
+            <option><?= $annee ?></option>
           <?php endforeach ?>
         </select>
         <button type="submit">Rechercher</button>
@@ -49,7 +49,7 @@
           <td><?= $m['id'] ?></td>
           <td><?= $m['title'] ?></td>
           <td><?= $m['genre'] ?></td>
-          <td><?= $m['year'] ?></td>
+          <td><?= $m['annee'] ?></td>
         </tr>
       <?php endforeach ?>
     </table>
