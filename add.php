@@ -19,7 +19,7 @@
           <label for="title">Titre</label>
           <input type="text" name="title" id="title">
           <label for="year">Année</label>
-          <input type="number" name="year" id="year">
+          <input type="number" name="annee" id="annee">
           <label for="genre">Genre</label>
           <input type="text" name="genre" id="genre">
           <button type="submit">Enregistrer</button>
@@ -32,11 +32,11 @@
     require_once '../Database.php';
 
     $title = $_POST['title'];
-    $year = $_POST['year'];
+    $annee = $_POST['annee'];
     $genre = $_POST['genre'];
     $db = new Database();
 
-    if ($db->insertMovie($title, $year, $genre)) {
+    if ($db->insertMovie($title, $annee, $genre)) {
       header('Location: /');
     } else {
       header('Location: /add.php?e=1');

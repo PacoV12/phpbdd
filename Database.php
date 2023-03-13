@@ -44,10 +44,10 @@ class Database {
   }
 
   /** Get movies field "year" */
-  public function fetchMoviesFromYear(int $year): array {
+  public function fetchMoviesFromYear(int $annee): array {
     $prep = $this->pdo->prepare('SELECT * FROM movies WHERE year = ?');
 
-    if ($prep->execute([ $year ])) {
+    if ($prep->execute([ $annee ])) {
       $all = $prep->fetchAll(PDO::FETCH_ASSOC);
       if ($all) return $all;
     }
@@ -56,10 +56,10 @@ class Database {
   }
 
   /** Insert new movie in database */
-  public function insertMovie(string $title, int $year, string $genre): bool {
+  public function insertMovie(string $title, int $annee, string $genre): bool {
     $prep = $this->pdo->prepare('INSERT INTO movies (title, genre, year) VALUE (?, ?, ?)');
 
-    if ($prep->execute([ $title, $genre, $year ])) {
+    if ($prep->execute([ $title, $genre, $annee ])) {
       return true;
     }
 
